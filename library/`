@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include "library/libft.h"
+
+int main(void)
+{
+	char 		*s1 = "barev";
+	char 	*s2 = "abc";
+
+	printf("%s\n", s1);
+
+	ft_strlcpy(s1, s2, 3);
+	printf("%s", s1);
+
+	//printf("%s\n", ft_strtrim(s1, s2));
+
+	return(0);
+}
