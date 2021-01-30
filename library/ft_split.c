@@ -77,11 +77,18 @@ static	char	**get_words(const char *s, char c,int words_count)
 	int		index;
 	int		start;
 	int		iterator;
-	int		*words_lengths = (int*)ft_calloc(words_count, sizeof(int));
+	int		*words_lengths;
 	char	**words;
+
+	if (!(words_lengths = (int*)ft_calloc(words_count , sizeof(int))))
+	{
+		return (NULL);
+	}
+
 
 	if(!(words = (char**)malloc((words_count + 1) * sizeof(char*))))
 		return (NULL);
+	
 	str = ft_strtrim(s, &c);
 	i = 0;
 	iterator = 0;
@@ -97,7 +104,7 @@ static	char	**get_words(const char *s, char c,int words_count)
 				++i;
 			}
 			index = 0;
-			if(!(words[iterator] = (char*)malloc(sizeof(char) * words_lengths[iterator] + 1)))
+			if(!(words[iterator] = (char*)malloc(sizeof(char) * (words_lengths[iterator] + 1))))
 				return (to_free(words));
 			i = start;
 			while (str[i] != c && str[i] != '\0')
@@ -114,7 +121,8 @@ static	char	**get_words(const char *s, char c,int words_count)
 			++i;
 		}
 	}
-	words[i] = NULL;
+	words[iterator] = NULL;
+
 
 	return (words);
 }
