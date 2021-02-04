@@ -8,9 +8,8 @@
  
 int main(void)
 {
-    int filedesc = open("testfile.txt", O_WRONLY | O_CREAT);
- 
-    ft_putchar_fd('a', filedesc);
-   
+	printf("my res\t\t:\t%s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15));
+	printf("oroginal res\t:\t%s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 15));
+
     return 0;
 }
