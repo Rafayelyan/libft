@@ -10,7 +10,7 @@ typedef	struct	s_list
 }					t_list;
 
 int 	ft_strlen(const char *str);
-void	*ft_memset(void *str, int c, /*size_t*/unsigned int n);
+void	*ft_memset(void *str, int c, size_t n);
 void	ft_bzero(void *s, int n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, int n);

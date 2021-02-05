@@ -6,6 +6,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	int		needle_size;
 	char	*res_arr;
 
+	if(ft_strncmp(needle, "", ft_strlen(needle)) == 0 || len == 0)
+		return ((char *)haystack);
+
 	needle_size = ft_strlen(needle);
 	i = 0;
 	while (haystack[i] != '\0' && i < len)
@@ -23,5 +26,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		++i;
 	}
+
 	return (0);
 }

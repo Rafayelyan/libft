@@ -40,7 +40,7 @@ bonus		:
 				${CC} -c ${BONUS_SRCS}
 				ar rc libft.a ${BONUS_OBJS} 
 
-re			:	clean fclean toLib bonus #compile
+re			:	clean fclean toLib bonus compile
 
 compile		:
 				${CC} ../source.c -L. -lft

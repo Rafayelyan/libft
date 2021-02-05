@@ -1,10 +1,10 @@
 #include "libft.h"
 
-void *ft_memccpy(void *restrict dst, const void *restrict src, int c, int n)
+void	*ft_memccpy(void *dst, const void *src, int c, int n)
 {
-	int			i;
-	char		*dest;
-	const char 	*source;
+	int							i;
+	unsigned	char			*dest;
+	unsigned	const	char 	*source;
 
 	i = 0;
 	dest = dst;
@@ -24,10 +24,9 @@ void *ft_memccpy(void *restrict dst, const void *restrict src, int c, int n)
 			return (&dest[0] + i);
 		}
 	}
-	//	dest[n] = '\n';
 	return (0);
-
 }
-
-
-//some text
+/*
+   if(!dst && !src)
+	return (dst);
+*/

@@ -4,12 +4,19 @@
 #include <ctype.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include "library/libft.h"
+#include "libft/libft.h"
  
 int main(void)
 {
-	printf("my res\t\t:\t%s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15));
-	printf("oroginal res\t:\t%s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 15));
+	char *str = "";
+	size_t size = 0;
+
+	char *ret = ft_substr(str, 5, size);
+
+	printf("ret : %s", ret);
+
+	printf("%d\n", strncmp(ret, str + 5, size));
+
 
     return 0;
 }

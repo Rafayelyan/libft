@@ -5,7 +5,7 @@ void	*ft_memchr(const void *s, int c, int n)
 
 	i = 0;
 	str = s;
-	while (i < n && str[i] != '\0')
+	while (i < n)
 	{
 		if(str[i] == (char)c)
 		{
