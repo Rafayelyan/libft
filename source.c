@@ -8,15 +8,15 @@
  
 int main(void)
 {
-	char *str = "";
-	size_t size = 0;
+	t_list *l = ((void *)0);
+	t_list *expected;
+	t_list *actual;
 
-	char *ret = ft_substr(str, 5, size);
-
-	printf("ret : %s", ret);
-
-	printf("%d\n", strncmp(ret, str + 5, size));
-
+	expected = ((void *)0);
+	actual = ft_lstlast(l);
+	if (actual == expected)
+		printf("succses\n");
+	printf("failed\n");
 
     return 0;
 }

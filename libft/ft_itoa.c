@@ -68,7 +68,8 @@ char	*ft_itoa(int n)
 
 	num = n;
 	num_len = get_num_length(num);
-	number = (char*)malloc(sizeof(char) * (num_len + 1));
+	if(!(number = (char*)malloc(sizeof(char) * (num_len + 1))))
+		return (NULL);
 
 	convert(number, &num, &num_len);
 

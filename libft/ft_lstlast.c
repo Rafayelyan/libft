@@ -3,9 +3,12 @@
 t_list *ft_lstlast(t_list *lst)
 {
 	t_list	*temp;
-
-	temp = lst;
-	while (temp->next)
+	
+	if(lst == NULL)
+		temp = lst;
+	else
+		temp = lst->next;
+	while (temp)
 	{
 		temp = temp->next;
 	}
