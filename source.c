@@ -8,15 +8,16 @@
  
 int main(void)
 {
-	t_list *l = ((void *)0);
-	t_list *expected;
-	t_list *actual;
+	char n[40] = "-88888888888888888888888888";
+	int i1 = atoi(n);
+	int i2 = ft_atoi(n);
 
-	expected = ((void *)0);
-	actual = ft_lstlast(l);
-	if (actual == expected)
-		printf("succses\n");
-	printf("failed\n");
+	printf("atoi\t:\t%d\n", i1);
+	printf("ft_atoi\t:\t%d\n", i2);
+	if (i1 == i2)
+		printf("OK\n");
+	else
+		printf("KO\n");
 
-    return 0;
+	return (0);
 }

@@ -1,6 +1,17 @@
-/* function paymanin bavararelu depqum grac er vor veradarcnuma 0 ic tarber arjeqner
- * im gracov menak 1 a veradarcnum paymanin bavararelu depqum
- * */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rakhacha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/07 20:17:37 by rakhacha          #+#    #+#             */
+/*   Updated: 2021/02/07 20:17:47 by rakhacha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 int	ft_isalpha(int c)
 {
 	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122)) ? 1 : 0;

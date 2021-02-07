@@ -10,37 +10,33 @@ OBJS		:= 	${SRCS:.c=.o}
 
 BONUS_OBJS	:= 	${BONUS_SRCS:.c=.o}
 
-NAME 		:= 	myprog
+NAME 		=	libft.a
 
 RM			:= 	rm -f
 
-all			:	toLib bonus  #compile
+all			:	$(NAME) bonus  #compile
 
 .c.o		:
 				${CC}  ${CC_OPTS} -c $< -o ${<:.c=.o}
 
-${NAME} 	: 
-				$(CC) $(CC_OPTS) $(SRCS) 
-
 clean 		: 
 				${RM} ${OBJS}
 				${RM} ${BONUS_OBJS}
-				${RM} libft.a
 
-fclean		:	
+fclean		:	clean	
 				${RM} ${NAME}
 
 .PHONY		:	all clean fclean re
 
-toLib		:
+$(NAME)		:
 				${CC} -c ${SRCS}
-				ar rc libft.a ${OBJS} 
+				ar rc $(NAME) ${OBJS} 
 
 bonus		:
 				${CC} -c ${BONUS_SRCS}
-				ar rc libft.a ${BONUS_OBJS} 
+				ar rc $(NAME) ${BONUS_OBJS} 
 
-re			:	clean fclean toLib bonus compile
+re			:	fclean $(NAME) bonus #compile
 
 compile		:
 				${CC} ../source.c -L. -lft
